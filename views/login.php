@@ -27,8 +27,8 @@
     <link rel="stylesheet" href="../style/main.css">
 </head>
 
-<body class="main-bg">
-    <div class="login-container text-c animated flipInX">
+<body>
+    <!-- <div class="login-container text-c animated flipInX">
         <div>
             <h1 class="logo-badge text-whitesmoke"><span class="fa fa-user-circle"></span></h1>
         </div>
@@ -50,7 +50,7 @@
             </form>
             <p class="margin-t text-whitesmoke"><small> Your Name &copy; 2021</small> </p>
         </div>
-    </div>
+    </div> -->
 </body>
 
 </html>
