@@ -61,7 +61,6 @@ table,
 tr,
 td {
   border: 2px solid;
-  /* border-collapse: collapse; */
 }
 td {
   padding: 10px;
