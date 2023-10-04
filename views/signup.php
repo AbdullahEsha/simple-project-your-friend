@@ -1,26 +1,16 @@
-<?php if (isset($_GET['error'])) {
-    if ($_GET['error'] == 'null_value') {
-        echo "Username/Password field can't left empty...";
-    }
-
-    if ($_GET['error'] == 'invalid_user') {
-        echo "Invalid username or Password";
-    }
-
-    if ($_GET['error'] == 'invalid_request') {
-        echo "You have to login first...";
-    }
-} elseif (isset($_GET['success'])) {
-    if ($_GET['success'] == 'registration_done') {
-        echo "Registration Done! Now you can login...";
-    }
-} ?>
+<?php
+// if (isset($_GET['error'])) {
+//     if ($_GET['error'] == 'db_error') {
+//         echo "Something went wrong...please try again";
+//     }
+// }
+//?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Login</title>
+    <title>Sign Up</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,16 +20,22 @@
 <body>
     <div class="container">
         <h1>My Friend System <br />
-            Log in Page</h1>
+            Registration Page</h1>
         <form>
             <div class="individual-input">
                 <p>Email</p> <input type="email" placeholder="Enter email address." />
             </div>
             <div class="individual-input">
+                <p>Profile Name</p> <input type="text" placeholder="Enter profile name." />
+            </div>
+            <div class="individual-input">
                 <p>Password</p> <input type="password" placeholder="Enter password." />
             </div>
+            <div class="individual-input">
+                <p>Confirm Password</p> <input type="password" placeholder="Enter password again." />
+            </div>
             <div class="individual-button">
-                <button type="submit">Login</button>
+                <button type="submit">Register</button>
                 <button type="clear">Clear</button>
             </div>
         </form>
