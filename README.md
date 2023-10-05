@@ -1,1 +1,1 @@
-# ElectricityTheft
+# simple-project-your-friend
