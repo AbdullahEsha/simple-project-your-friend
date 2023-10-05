@@ -1,10 +1,8 @@
-<?php
-// if (isset($_GET['error'])) {
-//     if ($_GET['error'] == 'db_error') {
-//         echo "Something went wrong...please try again";
-//     }
-// }
-//?>
+<?php if (isset($_GET['error'])) {
+    if ($_GET['error'] == 'db_error') {
+        echo "Something went wrong...please try again";
+    }
+} ?>
 
 <!DOCTYPE html>
 <html>
@@ -21,22 +19,23 @@
     <div class="container">
         <h1>My Friend System <br />
             Registration Page</h1>
-        <form>
+        <form action="../functions/signUpCheck.php" method="post">
             <div class="individual-input">
-                <p>Email</p> <input type="email" placeholder="Enter email address." />
+                <p>Email</p> <input type="email" name="friend_email" placeholder="Enter email address." />
             </div>
             <div class="individual-input">
-                <p>Profile Name</p> <input type="text" placeholder="Enter profile name." />
+                <p>Profile Name</p> <input type="text" name="profile_name" placeholder="Enter profile name." />
             </div>
             <div class="individual-input">
-                <p>Password</p> <input type="password" placeholder="Enter password." />
+                <p>Password</p> <input type="password" name="password" placeholder="Enter password." />
             </div>
             <div class="individual-input">
-                <p>Confirm Password</p> <input type="password" placeholder="Enter password again." />
+                <p>Confirm Password</p> <input type="password" name="confirmPassword"
+                    placeholder="Enter password again." />
             </div>
             <div class="individual-button">
-                <button type="submit">Register</button>
-                <button type="clear">Clear</button>
+                <button type="submit" name="submit">Register</button>
+                <button type="reset">Clear</button>
             </div>
         </form>
         <div class="navlinks">

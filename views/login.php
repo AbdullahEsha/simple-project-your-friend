@@ -31,16 +31,16 @@
     <div class="container">
         <h1>My Friend System <br />
             Log in Page</h1>
-        <form>
+        <form action="../functions/logCheck.php" method="post">
             <div class="individual-input">
-                <p>Email</p> <input type="email" placeholder="Enter email address." />
+                <p>Email</p> <input type="email" name="friend_email" placeholder="Enter email address." />
             </div>
             <div class="individual-input">
-                <p>Password</p> <input type="password" placeholder="Enter password." />
+                <p>Password</p> <input type="password" name="password" placeholder="Enter password." />
             </div>
             <div class="individual-button">
-                <button type="submit">Login</button>
-                <button type="clear">Clear</button>
+                <button type="submit" name="submit">Login</button>
+                <button type="reset">Clear</button>
             </div>
         </form>
         <div class="navlinks">
