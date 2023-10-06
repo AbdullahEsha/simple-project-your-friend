@@ -64,6 +64,32 @@ function addFriend($friendID)
 
     $sql = "insert into myfriends values('{$friendID['friend_id1']}','{$friendID['friend_id2']}')";
 
+    getNumOfFriends($friendID['friend_id1']);
+    
+    if (mysqli_query($conn, $sql)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function getNumOfFriends($friendID)
+{
+    $conn = dbConnection();
+
+    if (!$conn) {
+        echo "DB connection error";
+    }
+
+    $sql = "select count(*) as num_of_friends from myfriends where friend_id1='{$friendID}'";
+    $result = mysqli_query($conn, $sql);
+    $num_of_friends = mysqli_fetch_assoc($result);
+    $count = $num_of_friends['num_of_friends'] + 1;
+    
+    $_SESSION['num_of_friends'] = $count;
+
+    $sql = "update friends set num_of_friends='{$count}' where friend_id='{$friendID}'";
+
     if (mysqli_query($conn, $sql)) {
         return true;
     } else {

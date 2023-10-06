@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2023 at 06:33 AM
+-- Generation Time: Oct 06, 2023 at 02:04 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -42,7 +42,8 @@ CREATE TABLE `friends` (
 
 INSERT INTO `friends` (`friend_id`, `friend_email`, `password`, `profile_name`, `date_started`, `num_of_friends`) VALUES
 (1, 'jon@gmail.com', '1234', 'Jon', '2023-10-06', 0),
-(2, 'carry@gmail.com', '1234', 'Carry', '2023-10-06', 0);
+(2, 'carry@gmail.com', '1234', 'Carry', '2023-10-06', 0),
+(3, 'tiger@gmail.com', '1234', 'Tiger', '2023-10-06', 1);
 
 -- --------------------------------------------------------
 
@@ -54,6 +55,13 @@ CREATE TABLE `myfriends` (
   `friend_id1` int(11) NOT NULL,
   `friend_id2` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `myfriends`
+--
+
+INSERT INTO `myfriends` (`friend_id1`, `friend_id2`) VALUES
+(3, 1);
 
 --
 -- Indexes for dumped tables
@@ -73,7 +81,7 @@ ALTER TABLE `friends`
 -- AUTO_INCREMENT for table `friends`
 --
 ALTER TABLE `friends`
-  MODIFY `friend_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `friend_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
