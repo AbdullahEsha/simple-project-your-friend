@@ -7,7 +7,7 @@ function getAllFriends()
         echo "DB connection error";
     }
 
-    $sql = "select * from friends";
+    $sql = "select * from friends where friend_id not in (select friend_id2 from myfriends)";
     $result = mysqli_query($conn, $sql);
     $friends = [];
 
