@@ -31,7 +31,7 @@ require_once('../functions/allFunctions.php'); ?>
                         </td>
                         <td>
                             <input type="hidden" name="friend_id2"
-                                value="<?=$friends[$i]['friend_id2']?>"></input>
+                                value="<?=$friends[$i]['friend_id']?>">
                             <button type="submit" name="submit">Add as friend</button>
                         </td>
                     </tr>
