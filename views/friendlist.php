@@ -20,12 +20,24 @@ require_once('../functions/allFunctions.php'); ?>
             <?=$_SESSION['num_of_friends']?>
         </h1>
         <table>
-            <form>
-                <tr>
-                    <td>Dingo</td>
-                    <td><button type="submit">Unfriend</button></td>
-                </tr>
-            </form>
+            <tbody>
+                <?php $friends = getAllFriendsByID(); for ($i=0; $i != count($friends); $i++) {
+                    ?>
+                <form action="../functions/unfriend.php" method="post">
+                    <tr>
+                        <td>
+                            <?=$friends[$i]['profile_name']?>
+                        </td>
+                        <td>
+                            <input type="hidden" name="friend_id2"
+                                value="<?=$friends[$i]['friend_id']?>">
+                            <button type="submit" name="submit">Unfriend</button>
+                        </td>
+                    </tr>
+                </form>
+                <?php
+                } ?>
+            </tbody>
         </table>
         <div class="navlinks">
             <a href="./friendadd.php">Add Friends</a>
