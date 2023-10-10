@@ -22,7 +22,8 @@ require_once('../functions/allFunctions.php'); ?>
         <table>
             <tbody>
                 <?php $friends = getAllFriendsByID(); for ($i=0; $i != count($friends); $i++) {
-                    ?>
+                    if ($friends[$i]['profile_name'] != $_SESSION['profile_name']) {
+                        ?>
                 <form action="../functions/unfriend.php" method="post">
                     <tr>
                         <td>
@@ -36,6 +37,12 @@ require_once('../functions/allFunctions.php'); ?>
                     </tr>
                 </form>
                 <?php
+                    }
+                    if (count($friends)<2) {
+                        ?>
+                <p style="text-align: center; margin-top: 20px;"> You have no friends. </p>
+                <?php
+                    }
                 } ?>
             </tbody>
         </table>

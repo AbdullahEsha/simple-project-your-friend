@@ -38,6 +38,11 @@ require_once('../functions/allFunctions.php'); ?>
                 </form>
                 <?php
                     }
+                    if (count($friends)===0) {
+                        ?>
+                <p style="text-align: center; margin-top: 20px;"> Add Friends. </p>
+                <?php
+                    }
                 } ?>
             </tbody>
         </table>
