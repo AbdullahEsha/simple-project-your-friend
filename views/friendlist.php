@@ -38,11 +38,6 @@ require_once('../functions/allFunctions.php'); ?>
                 </form>
                 <?php
                     }
-                    if (count($friends)<2) {
-                        ?>
-                <p style="text-align: center; margin-top: 20px;"> You have no friends. </p>
-                <?php
-                    }
                 } ?>
             </tbody>
         </table>
